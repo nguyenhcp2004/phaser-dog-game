@@ -1,2 +1,2 @@
-export { default as PhaserGame } from './PhaserGame'
-export { default } from './PhaserGame'
+export { default as PhaserGame } from './components/PhaserDogGame'
+export { default } from './components/PhaserDogGame'

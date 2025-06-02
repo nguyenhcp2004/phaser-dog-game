@@ -1,7 +1,11 @@
 import { useEffect, useRef } from 'react'
 import Phaser from 'phaser'
 
-const PhaserGame = () => {
+interface PhaserDogGameProps {
+  speed?: number
+}
+
+const PhaserDogGame = ({ speed = 200 }: PhaserDogGameProps) => {
   const gameRef = useRef<HTMLDivElement>(null)
   const phaserGameRef = useRef<Phaser.Game | null>(null)
 
@@ -16,7 +20,7 @@ const PhaserGame = () => {
       leftLeg!: Phaser.GameObjects.Rectangle
       rightLeg!: Phaser.GameObjects.Rectangle
       direction: number = 1
-      speed: number = 200
+      speed: number = speed
 
       constructor() {
         super({ key: 'GameScene' })
@@ -113,7 +117,7 @@ const PhaserGame = () => {
         phaserGameRef.current = null
       }
     }
-  }, [])
+  }, [speed])
 
   return (
     <div
@@ -131,4 +135,4 @@ const PhaserGame = () => {
   )
 }
 
-export default PhaserGame
+export default PhaserDogGame

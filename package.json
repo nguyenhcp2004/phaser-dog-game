@@ -1,6 +1,6 @@
 {
   "name": "phaser-dog-game-hyunn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "A simple React component with a walking dog animation using Phaser.js",
   "main": "dist/index.js",
@@ -25,7 +25,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:lib": "tsc && vite build --mode library",
+    "build:lib": "vite build --mode library && npm run build:types",
+    "build:types": "tsc -p tsconfig.lib.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build:lib"
