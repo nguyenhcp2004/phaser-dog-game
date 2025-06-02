@@ -1,6 +1,6 @@
 {
   "name": "phaser-dog-game-hyunn",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "A simple React component with a walking dog animation using Phaser.js",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hyunn/phaser-dog-game.git"
+    "url": "https://github.com/nguyenhcp2004/phaser-dog-game"
   },
   "scripts": {
     "dev": "vite",
